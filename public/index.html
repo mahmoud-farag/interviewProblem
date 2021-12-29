@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Problem</title>
+    <link rel='stylesheet' href='style.css'/>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#test").CreateMultiCheckBox({ width: '230px', defaultText : 'Select Below', height:'250px' });
+        });
+    </script> -->
+</head>
+<body>
+    
+         <form action='/api/handltask' method="POST">
+            <span>Enter statring date</span> 
+            <input name='date' type='date' placeholder="Enter statring date"/>
+           <!--<span> your desired studying dayes</span>
+           <select id="test" >
+            <option value="1">Saturday</option>
+            <option value="2" >Sunday</option>
+            <option value="3">Monday</option>
+            <option value="4">Tuesday</option>
+            <option value="5">Wednesday</option>
+            <option value="6">Thursday</option>
+            <option value="7">Friday</option>
+          </select> -->
+           <span>max sessions to finish one chaper</span>
+           <input name='sessions' type='number' placeholder="max sessions to finish one chaper"/>
+           <button class='btn' type='submit'>Submit</button>
+         </form>
+
+</body>
+</html>
