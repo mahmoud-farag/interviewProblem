@@ -34,17 +34,22 @@ selectDays__Btn.addEventListener('click', ()=>{
 })
 
 submit__btn.addEventListener('click',async()=>{
-            const dataObject = {date:dateInput,sessions:sessionsInput, practiceDayes :daysInputs}
-        // const {data} = await axios.post('localhost:4000/api/handltask', dataObject)
+       const dataObject = {date:dateInput,sessions:sessionsInput, practiceDayes :daysInputs}
+       try{
         const rawResponse = await fetch('http://localhost:4000/api/handltask', {
-                    method: 'POST',
-                    headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(dataObject)
-             });
+            method: 'POST',
+            headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataObject)
+     });
             const content = await rawResponse.json();
-          window.location.href(content)
-             console.log(content);
+            console.log(content);
+            alert(JSON.stringify(content))
+
+       }catch(error){
+           alert(error.message)
+       }
+        
  })

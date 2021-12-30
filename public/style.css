@@ -2,7 +2,7 @@ body{
     background: #999;
     display: flex;
     justify-content: center;
-    margin-top: 10rem;
+    margin-top: 17rem;
     
 }
 .inputs__Container{
@@ -10,7 +10,8 @@ body{
     flex-direction: column;
     height: 20rem;
     width: 20rem;
-    padding:1rem
+    padding:1rem;
+    background: white;
 }
 .inputs__Container input{
     margin-bottom: 1rem;
@@ -21,7 +22,8 @@ body{
 button{
     cursor: pointer;
     border: none;
-    padding:1rem
+    padding:1rem;
+    font-size:1rem
 }
 select{
     width:20rem;
