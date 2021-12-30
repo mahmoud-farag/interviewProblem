@@ -15,24 +15,27 @@
     </script> -->
 </head>
 <body>
+    <div class="inputs__Container">
+        <span>Enter statring date</span> 
+        <input name='date' id='date' type='date' placeholder="Enter statring date"/>
+        <span>Choose your desired practice days</span>
+        <div class="multi_select">
+            <select id="select" multiple >
+                <option  value="1">Saturday</option>
+                <option  value="2" >Sunday</option>
+                <option  value="3">Monday</option>
+                <option  value="4">Tuesday</option>
+                <option  value="5">Wednesday</option>
+                <option  value="6">Thursday</option>
+                <option  value="7">Friday</option>
+              </select> 
+              <button id='selectDays__Btn'>finished my slecteing</button>
+         </div>
+         <span>max sessions to finish one chaper</span>
+         <input name='sessions' id='sessions' type='number' placeholder="max sessions to finish one chaper"/>
+         <button class='btn' id="submit__btn" type='submit'>Submit all Data</button>
     
-         <form action='/api/handltask' method="POST">
-            <span>Enter statring date</span> 
-            <input name='date' type='date' placeholder="Enter statring date"/>
-           <!--<span> your desired studying dayes</span>
-           <select id="test" >
-            <option value="1">Saturday</option>
-            <option value="2" >Sunday</option>
-            <option value="3">Monday</option>
-            <option value="4">Tuesday</option>
-            <option value="5">Wednesday</option>
-            <option value="6">Thursday</option>
-            <option value="7">Friday</option>
-          </select> -->
-           <span>max sessions to finish one chaper</span>
-           <input name='sessions' type='number' placeholder="max sessions to finish one chaper"/>
-           <button class='btn' type='submit'>Submit</button>
-         </form>
-
+      </div>
+      <script src='./test.js'></script>
 </body>
 </html>

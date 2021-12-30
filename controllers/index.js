@@ -2,10 +2,18 @@ import { getAllPracticesDaysInOneMonth } from "../utils/getAllPracticesDaysInOne
 import { matchDaysNumbers } from "../utils/matchDaysNumbers.js";
 
 const handlTaskController = (req, res)=>{
-   const {sessions, date} = req.body
+   
+   const {sessions, date,practiceDayes} = req.body
+    //  covert array from string sumbers to int numbers
+    practiceDayes.map(((element, index)=>{
+        practiceDayes[index] = +element
+   }))
     const numberOfChapters= [...Array(30).keys()] 
     const sessionsInput=  [...Array(+sessions).keys()] ;
-    let practiceDayesInputs = [2,6].sort();
+    // const sessionsInput=  [...Array(+sessions).keys()] ;
+    
+    // res.json({date,practiceDayes, sessionsInput})
+    // let practiceDayesInputs = [2,6].sort();
     // const date="2021-12-19"
     const DECEMBER = 12;
     let arrayDate = date.split('-')  
@@ -17,7 +25,7 @@ const handlTaskController = (req, res)=>{
     let plainEnglishDayAndCode = [];
     let allPracticeDayesInSingleMonth = []
 
-  practiceDayesInputs.forEach(day=>{
+    practiceDayes.forEach(day=>{
       let result = matchDaysNumbers(+day)
       plainEnglishDayAndCode.push(result)
     })
@@ -59,7 +67,7 @@ const handlTaskController = (req, res)=>{
                 }
         })
     })
-    res.json({youSchedulePracticeDayes:schedule})
+    res.json(schedule)
 }
 
 

@@ -13,6 +13,6 @@ const getTotalDatesForSingleDayInMonth=( m, y , dayCode)=> {
     for ( var i = dayDates[0] +7; i <= days; i += 7 ) {
         dayDates.push( i );
     }
-    return dayDates.sort();
+    return dayDates;
 }
 export {getTotalDatesForSingleDayInMonth}

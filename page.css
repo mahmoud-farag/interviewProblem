@@ -18,15 +18,9 @@ body{
 .inputs__Container span {
     margin-bottom:.2rem
 }
-button{
-    cursor: pointer;
-    border: none;
-    padding:1rem
-}
 select{
     width:20rem;
 }
 .selected{
-    background: black;
-    color:white;
+    background: blue;
 }
